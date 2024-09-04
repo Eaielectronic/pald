@@ -39,15 +39,15 @@
             color: #2c3e50;
         }
         main {
-            margin-left: 200px;
+            margin-left: 20px;
             padding: 20px;
         }
         section {
             margin-bottom: 40px;
             padding-top: 80px; /* Espace en haut */
-            padding-right: 180px; /* Espace à droite */
+            padding-right: 80px; /* Espace à droite */
             padding-bottom: 80px; /* Espace en bas */
-            padding-left: 180px;
+            padding-left: 80px;
             background-color: rgb(255, 255, 255);
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -194,42 +194,20 @@
     <div class="container">
         
         <section id="about">
-            <h2>À propos de nous</h2>
-            <img src="banier.jpg" alt="Image de l'organisation" class="image">
-            <h3>Association locale basée à Fontainebleau-Avon. Statuts déposés février 2021.</h3>
-            <p class="centre">Bienvenue sur le site de notre organisation. Nous sommes dédiés à [votre mission ou objectif].</p>
-            <p>Public :
-            <br>
-                Elle s’adresse aux parents d’enfants neurodivergents : tout enfant, adolescent et jeune adulte différent de la « norme », qui aurait des difficultés à entrer dans le moule de la société et qui pour évoluer dans un cadre a besoin de la prise en compte de ses particularités.
-                
-                <br>Il s’agit par exemple des troubles type Dys (dyslexie, dysphasie, dyspraxie,…), TSA (Trouble du spectre de l’autisme), TDA (Trouble déficitaire de l’attention), HP (haut potentiel), TSAF (troubles du spectre de l’alcoolisation fœtale) et d'autres.
-                
-                <br>Elle s’adresse également aux professionnels de l’éducation et de la santé qui accompagnent des enfants et souhaiteraient avoir des renseignements ou orienter des familles.
-            </p>
+            
                 <br>
-                <h4 class="non-centre">L’association a pour objet de :</h4>
-            <p>
-                 - Créer un espace de <u>confiance et de bienveillance</u>, lorsqu’il n’est pas toujours évident de trouver le bon interlocuteur, la famille n’ayant pas toujours le recul nécessaire, et les professionnels pas toujours disponibles en temps et écoute.
-               <br>  - <u>Avoir la disponibilité d’écoute</u>, d’accompagnement à la réflexion et aide à l’orientation pour les familles en détresse ou qui souhaitent aider au mieux leur enfant, sans jugement, sans apriori. « Chaque cas est unique et demande une réponse unique ».
-               <br>  - <u>Promouvoir la tolérance et l’acceptation de la différence</u> comme une force personnelle et une richesse bénéfique pour la société.
-
-            </p>    
-               
-                <br><h4 class="non-centre">En cela, elle s’appuie sur deux grandes missions :</h4>
-            <p>   
-                <br>- promouvoir la détection précoce
-                <br>- et accompagner les familles
-            </p>      
-                <br>
-                <br>
-                <iframe id="myIframe" src="https://docs.google.com/document/d/1QePnMWAaOtH6i9IIndKGTYdmlRE6Wn8Cxgmj-e8cdxE/pub?embedded=true" width="1800" style=" border: none;" frameborder="0" scrolling="no" onload="adjustIframe(this)" ></iframe>
+                <iframe id="myIframe" src="https://docs.google.com/document/d/1QePnMWAaOtH6i9IIndKGTYdmlRE6Wn8Cxgmj-e8cdxE/pub?embedded=true" width="2000" style="border: none;" frameborder="0" scrolling="no" ></iframe>
                 <script>
-                    let toto;
-                    function adjustIframe(obj) {
-                        toto = obj.contentWindow.document.body.scrollHeight;
-                        console.log(toto)
-                    }
-
+                    window.onload = function() {
+    fetch('hauteur.txt')
+        .then(response => response.text())
+        .then(data => {
+            var height = parseInt(data.trim());
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = height + 'px';
+        })
+        .catch(error => console.error('Erreur:', error));
+};
                 </script>
                 <br>
                 <img src="image1.png" alt="Image de l'organisation" width="500">
@@ -237,7 +215,28 @@
         </section>
         <section id="actualite">
             <h2>Dernières nouvelles</h2>
+
             <a href="nouvelles/index.html" class="btn">En savoir plus</a>
+            <iframe id="myIframe1" src="https://docs.google.com/document/d/1d_AUBQ-VpMxyPm4zGB6KEAUIIOkeBZJT3SRBxyvjzxw/pub?embedded=true" text-align="center" width="1800" style=" border: none;" frameborder="0" scrolling="no" ></iframe>
+                <script>
+                    // Fonction pour lire le fichier texte
+                    async function fetchHeightFromFile() {
+                        const response = await fetch('height1.txt'); // Assurez-vous que le fichier height.txt est accessible
+                        const height = await response.text();
+                        return height.trim(); // Supprime les espaces blancs
+                    }
+            
+                    // Fonction pour définir la hauteur de l'iframe
+                    async function setIframeHeight() {
+                        const height = await fetchHeightFromFile();
+                        const iframe = document.getElementById('myIframe1');
+                        iframe.height = height; // Définir la hauteur avec la valeur lue
+                    }
+            
+                    // Appeler la fonction pour définir la hauteur de l'iframe
+                    setIframeHeight();
+                </script>
+                 <a href="nouvelles/index.html" class="btn">En savoir plus</a>
             <p></p> 
         </section>
         <section id="section3" class="footeRr">
