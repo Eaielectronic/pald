@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parole à la différence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .rectangle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .rectangle ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .rectangle ul li {
+            margin: 10px 0;
+        }
+        .rectangle ul li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .rectangle ul li a:hover {
+            color: #2c3e50;
+        }
+        main {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding-top: 80px; /* Espace en haut */
+            padding-right: 180px; /* Espace à droite */
+            padding-bottom: 80px; /* Espace en bas */
+            padding-left: 180px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        section p {
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+        header {
+            background-color: #00568f;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        nav {
+            background-color: #007f9f;
+            padding: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .container {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #00568f;
+            color: #fff;
+             padding: 1rem 0;
+              position: fixed;
+             width: 100%;
+             bottom: -10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            background-color: #00568f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0284db;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        .video {
+            width: 50%;
+            height: 50%;
+        }
+        .menu {
+            background-color: #ffffff;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        .menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .additional-element {
+            background-color: #eee;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #F9E79F;
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .centre {
+            text-align: center;
+        }
+        .non-centre {
+            text-align: justify; /* Par défaut, les paragraphes sont alignés à gauche */
+        }
+        .texte {
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+        .section1 {
+            margin-bottom: 40px;
+            padding-top: 20px; /* Espace en haut */
+            padding-right: 80px; /* Espace à droite */
+            padding-bottom: 20px; /* Espace en bas */
+            padding-left: 80px;
+            background-color: rgb(227, 227, 227);
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footeRr {
+            background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px; /* Espace en haut */
+    padding-right: 20px; /* Espace à droite */
+    padding-bottom: 20px; /* Espace en bas */
+    padding-left: 20px;
+    width: 97%; /* Ajustez cette valeur pour modifier la largeur */
+    height: 160px; /* Ajustez cette valeur pour modifier la hauteur */
+    border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Parole à la différence</h1>
+    </header>
+    <nav>
+         <a href="index.html"> A propos</a>
+        <a href="nouvelles/index.html"> Nouvelles</a>
+        <a href="nouvelles/index.html"> Nos rendez vous</a>
+        <a href="membre/index.html"> Membres</a>
+    </nav>
+    <div class="rectangle">
+        <ul>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#actualite">Dernières nouvelles</a></li>
+            <li><a href="#section3">Nous contacter</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        
+        <section id="about">
+            
+                <br>
+                <iframe id="myIframe" src="https://docs.google.com/document/d/1QePnMWAaOtH6i9IIndKGTYdmlRE6Wn8Cxgmj-e8cdxE/pub?embedded=true" width="1800" style=" border: none;" frameborder="0" scrolling="no" ></iframe>
+                <script>
+                    window.onload = function() {
+    fetch('hauteur.txt')
+        .then(response => response.text())
+        .then(data => {
+            var height = parseInt(data.trim());
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = height + 'px';
+        })
+        .catch(error => console.error('Erreur:', error));
+};
+                </script>
+                <br>
+                <img src="image1.png" alt="Image de l'organisation" width="500">
+                <br>
+        </section>
+        <section id="actualite">
+            <h2>Dernières nouvelles</h2>
+
+            <a href="nouvelles/index.html" class="btn">En savoir plus</a>
+            <iframe id="myIframe1" src="https://docs.google.com/document/d/1d_AUBQ-VpMxyPm4zGB6KEAUIIOkeBZJT3SRBxyvjzxw/pub?embedded=true" text-align="center" width="1800" style=" border: none;" frameborder="0" scrolling="no" ></iframe>
+                <script>
+                    // Fonction pour lire le fichier texte
+                    async function fetchHeightFromFile() {
+                        const response = await fetch('height1.txt'); // Assurez-vous que le fichier height.txt est accessible
+                        const height = await response.text();
+                        return height.trim(); // Supprime les espaces blancs
+                    }
+            
+                    // Fonction pour définir la hauteur de l'iframe
+                    async function setIframeHeight() {
+                        const height = await fetchHeightFromFile();
+                        const iframe = document.getElementById('myIframe1');
+                        iframe.height = height; // Définir la hauteur avec la valeur lue
+                    }
+            
+                    // Appeler la fonction pour définir la hauteur de l'iframe
+                    setIframeHeight();
+                </script>
+                 <a href="nouvelles/index.html" class="btn">En savoir plus</a>
+            <p></p> 
+        </section>
+        <section id="section3" class="footeRr">
+            <h5>Nous contacter</h5>
+        <p>  Nous contacter par email : <a href="mailto:email@example.com">votre-email@example.com</a></p>
+        <p>  Nous appeler au : <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+        <p>  © 2024 Parole à la différence. Tous droits réservés.</p>
+        </section>
+        
+     </div>
+</body>
+</html>

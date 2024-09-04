@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parole à la différence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .rectangle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .rectangle ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .rectangle ul li {
+            margin: 10px 0;
+        }
+        .rectangle ul li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .rectangle ul li a:hover {
+            color: #2c3e50;
+        }
+        main {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding-top: 80px; /* Espace en haut */
+            padding-right: 180px; /* Espace à droite */
+            padding-bottom: 80px; /* Espace en bas */
+            padding-left: 180px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        section p {
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+        header {
+            background-color: #00568f;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        nav {
+            background-color: #007f9f;
+            padding: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .container {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #00568f;
+            color: #fff;
+             padding: 1rem 0;
+              position: fixed;
+             width: 100%;
+             bottom: -10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            background-color: #00568f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0284db;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        .video {
+            width: 50%;
+            height: 50%;
+        }
+        .menu {
+            background-color: #ffffff;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        .menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .additional-element {
+            background-color: #eee;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #F9E79F;
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .centre {
+            text-align: center;
+        }
+        .non-centre {
+            text-align: justify; /* Par défaut, les paragraphes sont alignés à gauche */
+        }
+        .texte {
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+        .section1 {
+            margin-bottom: 40px;
+            padding-top: 20px; /* Espace en haut */
+            padding-right: 80px; /* Espace à droite */
+            padding-bottom: 20px; /* Espace en bas */
+            padding-left: 80px;
+            background-color: rgb(227, 227, 227);
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footeRr {
+            background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px; /* Espace en haut */
+    padding-right: 20px; /* Espace à droite */
+    padding-bottom: 20px; /* Espace en bas */
+    padding-left: 20px;
+    width: 97%; /* Ajustez cette valeur pour modifier la largeur */
+    height: 160px; /* Ajustez cette valeur pour modifier la hauteur */
+    border-radius: 0;
+        }
+        .texte-bleu {
+            color: rgb(0, 102, 255);
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .texteat {
+            color: rgb(62, 93, 140);
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Lucida Console', monospace;
+        }
+        .image1 {
+            float: right; /* ou right pour aligner à droite */
+            margin-right: 10px; /* espace entre l'image et le texte */
+        }
+        .background-section {
+      background-image: url('image2.jpg');
+      background-size: cover;
+      height: 200;
+      width: 100;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 400px;
+    }
+    .background-section1 {
+            width: 50%;
+            height: auto;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Parole à la différence</h1>
+    </header>
+    <nav>
+        <a href="../index.html"> A propos</a>
+        <a href="../nouvelles/index.html"> Nouvelles</a>
+        <a href="../rendez_vous/index.html"> Nos rendez vous</a>
+        <a href="index.html"> Membres</a>
+    </nav>
+    <div class="rectangle">
+        <ul>
+            <li><a href="#org">Oragnisation</a></li>
+            <li><a href="#Cotiastion">Cotisation</a></li>
+            <li><a href="#Membres">Membres</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        
+        <section id="org">
+            <h2>Oragnisation</h2>
+            <img src="image.png" alt="Image de l'organisation" height="230" width="500">
+            <h3>Association locale basée à Fontainebleau-Avon. Statuts déposés février 2021.</h3>
+            <p class="centre">Bienvenue sur le site de notre organisation. Nous sommes dédiés à [votre mission ou objectif].</p>
+            
+            <p>
+                 - Bureau de l’association : Sabina Domenech, Olga Eglin, Pascale DeAraujo.
+            <br>
+                 - Comité directeur : plus large, des bénévoles qui nous aident par leur expérience de parents ou de professionnels et qui sont présents lors des groupes de parole, auprès des professionnels. Bureau + Catherine R + Marie-Jo C + Franck M + Hélène C + Frédérique D
+               <br>
+                 - Partenaires locaux (Education nationale, orthophonistes, pédiatres, psychologues, ergothérapeutes, psychomotriciens, etc.) : chez qui nous déposons des flyers pour contacter les familles.
+                <br>
+                 - Nos membres : <a href="https://parole-a-la-difference.s2.yapla.com/fr/espace-membres/" class="texte-bleu"> <u>adhérer</u></a> 
+            </p>    
+               
+            <img src="image1.JPG" alt="Description de l'image" class="image">
+                <br>
+        </section>
+        <section id="Cotiastion">
+            <h2>Cotisation</h2>
+            
+            <h4>Cotisations annuelles</h4>
+            <p>Adhésion : annuelle, prévue entre <strong>5 et 15€ selon vos possibilités</strong>. Exemption possible (gratuité). C'est à vous de fixer ce que vous pouvez donner.</p> 
+            <br>
+            <p>Nous avons besoin de vos inscriptions pour justifier de nos demandes auprès des organismes (prêt de salles, subventions, etc.) donc merci de vous inscrire si vous souhaitez nous soutenir!</p>
+            <br>
+            <p>Pour tous : remplissez le <a href="https://parole-a-la-difference.s2.yapla.com/fr/espace-membres/" class="texte-bleu"> <u>formulaire sur Internet</u></a> puis choisissez soit paiement par CB en ligne, ou chèque/ espèce si vous préférez nous régler directement.</p>
+            <br><p><em>Attention, automatiquement, dans le récapitulatif du paiement, Yapla vous propose de leur verser un "pourboire suggéré" (hébergement gratuit: ils vivent des dons des adhérents des différentes associations) mais vous pouvez cocher sur "modifier" et le mettre à zéro.</em></p>
+            <a href="https://parole-a-la-difference.s2.yapla.com/fr/espace-membres/" class="btn">Devenire membre</a>
+            <br>
+            <img src="image4.png" alt="puzzl" class="background-section1">
+        </section>
+        <section id="Membres">
+            <h2>Composition et adhésions (extrait des statuts)</h2>
+            <p>L’association se compose de :</p>
+            <p><b> - Membres actifs.</b></p>
+            <p><b> - Membres bienfaiteurs</b>, qui apportent leur concours financier à titre exceptionnel.</p>
+            <p><b> - Membres d'honneurs</b> , mention attribuée dans de rares cas pour reconnaître les services et contributions exceptionnels rendus.</p>
+            <p>Les mineurs peuvent adhérer à l’association. En dessous de 16 ans, c’est au parent que revient le droit de vote à l’AG, mais à partir de 16 ans, il peut voter lui-même et même se présenter dans le comité directeur.</p>
+            <p>Pour être membre <b>bienfaiteur</b> ou <b>d'honneur</b>, il faut être parrainé par l’un des membres du comité directeur et que la demande soit entérinée à l’unanimité par le comité directeur.</p>
+            <p>Le titre de <b>membre d'honneur</b> peut être décerné par le comité directeur à l’unanimité des voix. Ce titre confère aux personnes qui l'ont obtenu le droit de faire partie de l'assemblée générale sans être tenues de payer une cotisation mais ne disposent pas de voix délibérative.</p>
+            <br>
+            <p>Pour être membre actif, il faut :</p>
+            <p>Payer une <b>cotisation annuelle</b> dont le montant est fixé chaque année par le Comité directeur et approuvée par l’assemblée générale ;</p>
+            <p>Pour les membres mineurs, une autorisation parentale sera demandée aux parents ou au tuteur légal.</p>
+            <p class="texteat">De façon exceptionnelle, le comité directeur peut décider d’exempter de cotisation annuelle une famille qui ne pourrait pas régler la cotisation.</p>
+            <p>L’association délivre à tous ses membres une carte d'adhésion qui peut être au format électronique valable du 1er janvier au 31 décembre de chaque année.</p>
+            <br>
+        </section>
+        <section id="no" class="footeRr">
+            <h5>Nous contacter</h5>
+        <p>  Nous contacter par email : <a href="mailto:email@example.com">votre-email@example.com</a></p>
+        <p>  Nous appeler au : <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+        <p>  © 2024 Parole à la différence. Tous droits réservés.</p>
+        </section>
+        <section class="background-section">
+
+        </section>
+        
+     </div>
+</body>
+</html>
