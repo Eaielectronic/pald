@@ -203,8 +203,19 @@
         <section id="V">
             <h2>Rendez vous à venire</h2>
             <img src="../banier.jpg" alt="Image de l'organisation" class="image1">
-            <h3>Il semble n'y avoir aucun rendez vous...</h3>
-            <img src="../image1.png" alt="Image de l'organisation" class="image">
+             <iframe id="myIframe" src="https://docs.google.com/document/d/1lLon0oVr2Q0h6qDJ0tz0HTqLuV_7Qx1r0yZu764e3I4/pub?embedded=true" width="900" style=" border: none;" scrolling="no" ></iframe>
+                <script>
+                    window.onload = function() {
+    fetch('hauteur.txt')
+        .then(response => response.text())
+        .then(data => {
+            var height = parseInt(data.trim());
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = height + 'px';
+        })
+        .catch(error => console.error('Erreur:', error));
+};
+                </script>
         </section>
         <section id="P">
             
